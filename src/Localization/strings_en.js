@@ -18,7 +18,7 @@ export default {
   "recordDeleted": "Record deleted",
 
   // Custom
-  "appTitle": "Records App",
+  "appTitle": "Dat's Blog",
   "recordsTitle": "Records",
   "records": "records",
   "createRecord": "Create New Record",
@@ -29,7 +29,7 @@ export default {
   "filterFailed": "Filter failed. {0}",
   "sortFailed": "Sort failed. {0}",
   "aboutText": "This app uses React, Redux, React Router, and many other helpful libraries.",
-  "homeText": "React, Redux and React Router for ultra-responsive web apps.",
+  "homeText": "My personal blog on tech, career, life, and hobbies.",
   "learnMore": "Learn more",
   "textError": "Text is required.",
 };
