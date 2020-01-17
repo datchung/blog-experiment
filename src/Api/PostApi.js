@@ -1,0 +1,14 @@
+export function getPosts() {
+    return [
+        {
+            "title": "A Simple Intro to Kubernetes",
+            "dateCreated": "2020-01-15",
+            "link": "2020/2020-01-15_Kubernetes.md"
+        },
+        {
+            "title": "A Simple Intro to Docker",
+            "dateCreated": "2020-01-15",
+            "link": "2020/2020-01-15_Docker.md"
+        }
+    ];
+}

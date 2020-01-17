@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import HomePage from "./Home/HomePage";
+import PostsPage from "./Posts/PostsPage";
 import AboutPage from "./About/AboutPage";
 import Header from "./Common/Header";
 import PageNotFound from "./PageNotFound";
@@ -14,7 +14,7 @@ function App() {
     <div className="container-fluid">
       <Header />
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/" component={PostsPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/records" component={RecordsPage} />
         <Route path="/record/:id" component={ManageRecordPage} />

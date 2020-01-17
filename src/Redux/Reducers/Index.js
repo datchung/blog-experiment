@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
-import records from "./RecordReducer";
+import posts from "./PostReducer";
 import apiCallsInProgress from "./ApiStatusReducer";
 
 const rootReducer = combineReducers({
-  records,
+  posts,
   apiCallsInProgress
 });
 
