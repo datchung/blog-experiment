@@ -19,8 +19,8 @@ export function loadPosts() {
         }
       });
       return promise
-        .then(posts => {
-          dispatch(loadPostsSuccess(posts));
+        .then(response => {
+          dispatch(loadPostsSuccess(response.posts));
         })
         .catch(error => {
           dispatch(apiCallError(error));
