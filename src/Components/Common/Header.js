@@ -7,11 +7,7 @@ const Header = () => {
   return (
     <nav>
       <NavLink to="/" activeStyle={activeStyle} exact>
-        {T.t("home")}
-      </NavLink>
-      {" | "}
-      <NavLink to="/records" activeStyle={activeStyle}>
-        {T.t("recordsTitle")}
+        {T.t("appTitle")}
       </NavLink>
       {" | "}
       <NavLink to="/about" activeStyle={activeStyle}>

@@ -3,7 +3,7 @@ import { beginApiCall, apiCallError } from "./ApiStatusActions";
 import * as postApi from "../../Api/PostApi";
 
 export function loadPostsSuccess(posts) {
-  return { type: types.LOAD_RECORDS_SUCCESS, posts };
+  return { type: types.LOAD_POSTS_SUCCESS, posts };
 }
 
 export function loadPosts() {
