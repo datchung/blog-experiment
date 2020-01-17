@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import Back from "../Common/Back";
+// import Back from "../Common/Back";
 import PageTitle from "../Common/PageTitle";
 import PostList from "./PostList"
 import T from '../../Localization/i18n';
@@ -41,6 +41,7 @@ class PostsPage extends React.Component {
 
 PostsPage.propTypes = {
   history: PropTypes.object.isRequired,
+  actions: PropTypes.object.isRequired,
   posts: PropTypes.array.isRequired
 };
 
