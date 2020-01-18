@@ -12,9 +12,9 @@ function App() {
     <div className="container-fluid">
       <Header />
       <Switch>
-        <Route exact path="/" component={PostsPage} />
-        <Route exact path="/posts" component={PostsPage} />
-        <Route path="/about" component={AboutPage} />
+        <Route exact path="/blog" component={PostsPage} />
+        <Route exact path="/blog/posts" component={PostsPage} />
+        <Route path="/blog/about" component={AboutPage} />
         <Route component={PageNotFound} />
       </Switch>
       <ToastContainer autoClose={3000} hideProgressBar />
