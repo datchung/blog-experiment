@@ -18,6 +18,7 @@ export default {
   "recordDeleted": "Record deleted",
 
   // Custom
+  "blogHome": "Blog Home",
   "appTitle": "Dat's Blog",
   "recordsTitle": "Records",
   "records": "records",

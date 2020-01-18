@@ -6,13 +6,13 @@ const Header = () => {
   const activeStyle = { color: "#F15B2A" };
   return (
     <nav>
-      <NavLink to="/" activeStyle={activeStyle} exact>
-        {T.t("appTitle")}
+      <NavLink to="/blog" activeStyle={activeStyle} exact>
+        {T.t("blogHome")}
       </NavLink>
-      {" | "}
+      {/* {" | "}
       <NavLink to="/about" activeStyle={activeStyle}>
         {T.t("about")}
-      </NavLink>
+      </NavLink> */}
     </nav>
   );
 };
