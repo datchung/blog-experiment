@@ -13,6 +13,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={PostsPage} />
+        <Route exact path="/posts" component={PostsPage} />
         <Route path="/about" component={AboutPage} />
         <Route component={PageNotFound} />
       </Switch>
