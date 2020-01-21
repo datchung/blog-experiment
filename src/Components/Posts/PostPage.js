@@ -7,6 +7,7 @@ import { getPost } from "../../Api/PostApi";
 import PropTypes from "prop-types";
 // import Spinner from "../Common/Spinner";
 import { toast } from "react-toastify";
+import marked from "marked";
 
 export function PostPage({
   history,
@@ -43,7 +44,7 @@ export function PostPage({
       {/* <PageTitle 
         title={record.id ? T.t("editRecord") : T.t("createRecord")}
         /> */}
-      {post.content}
+        <div dangerouslySetInnerHTML={{ __html: post.content && marked(post.content) }}></div>
     </>
   );
 }
