@@ -1,6 +1,5 @@
 import { handleResponse, handleError } from "./ApiUtils";
 const baseUrl = process.env.API_URL + "data/";
-//const baseUrl = "/data/posts.json";
 
 export function getPosts() {
   return fetch(baseUrl + "posts.json")
@@ -19,13 +18,7 @@ export async function handlePostResponse(response) {
 }
 
 export function getPost(link) {
-  // return {
-  //   post: {
-  //     content: "abc"
-  //   }
-  // };
-
-  return fetch(baseUrl + link)
+  return fetch(baseUrl + link + ".md")
     .then(handlePostResponse)
     .catch(handleError);
 }
