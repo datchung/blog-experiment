@@ -1,5 +1,5 @@
-export async function handleResponse(response) {
-  if (response.ok) return response.json();
+export async function handleResponse(response, isJson = true) {
+  if (response.ok) return isJson ? response.json() : response.text();
   if (response.status === 400) {
     // So, a server-side validation error occurred.
     // Server side validation returns a string error message, so parse as text instead of json.
@@ -8,6 +8,11 @@ export async function handleResponse(response) {
   }
   throw new Error("Network response was not ok.");
 }
+
+// export async function handleResponseText(response) {
+//   console.info("response %o", response);
+//   return handleResponse(response, false);
+// }
 
 // In a real app, would likely call an error logging service.
 export function handleError(error) {

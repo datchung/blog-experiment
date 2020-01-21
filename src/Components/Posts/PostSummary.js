@@ -7,7 +7,7 @@ const Post = ({ post }) => (
   <>
     <div className="columns">
       <div className="column">
-        <Link to={"/post/" + post.link}>
+        <Link to={"/blog/post/" + encodeURIComponent(post.link)}>
           {post.title}, {post.dateCreated}
         </Link>
       </div>
