@@ -8,13 +8,12 @@ export function getPosts() {
 }
 
 export async function handlePostResponse(response) {
-  console.info("response %o", response);
-  return handleResponse(response, false).then(function(response) {
-    console.info("text %o", response);
-    return {
-      content: response
-    }
-  });
+  return handleResponse(response, false)
+    .then(function(response) {
+      return {
+        content: response
+      }
+    });
 }
 
 export function getPost(link) {

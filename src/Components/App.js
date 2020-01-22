@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import PostsPage from "./Posts/PostsPage";
 import PostPage from "./Posts/PostPage";
-// import AboutPage from "./About/AboutPage";
 import Header from "./Common/Header";
 import PageNotFound from "./PageNotFound";
 import { ToastContainer } from "react-toastify";

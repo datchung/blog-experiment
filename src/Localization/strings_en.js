@@ -25,6 +25,7 @@ export default {
   "createRecord": "Create New Record",
   "editRecord": "Edit Record",
   "loadingPostsFailed": "Loading posts failed. {0}",
+  "loadingPostFailed": "Loading post failed. {0}",
   "deleteFailed": "Delete failed. {0}",
   "toggleFailed": "Toggle failed. {0}",
   "filterFailed": "Filter failed. {0}",

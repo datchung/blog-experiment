@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-// import { connect } from "react-redux";
 import { getPost } from "../../Api/PostApi";
-// import T from '../../Localization/i18n';
-// import Back from "../Common/Back";
-// import PageTitle from "../Common/PageTitle";
+import T from '../../Localization/i18n';
+import Back from "../Common/Back";
 import PropTypes from "prop-types";
 // import Spinner from "../Common/Spinner";
 import { toast } from "react-toastify";
@@ -17,36 +15,33 @@ export function PostPage({
   const [post, setPost] = useState({});
 
   useEffect(() => {
+    var promise = new Promise(function(resolve, reject) {
       var id = decodeURIComponent(props.match.params.link);
-      console.info("useEffect %o", id);
+      
+      try {
+        resolve(getPost(id));
+      }
+      catch(error) {
+        reject(error);
+      }
+    });
 
-      var promise = new Promise(function(resolve, reject) {
-        try {
-          resolve(getPost(id));
-        }
-        catch(error) {
-          reject(error);
-        }
+    promise
+      .then(response => {
+        setPost(response);
+      })
+      .catch(error => {
+        toast.error(
+          String.format(T.t("loadingPostFailed"),
+          error));
       });
-
-      promise
-          .then(response => {
-            setPost(response);
-            console.info("PostPage %o", response);
-          })
-          .catch(error => {
-            throw error;
-          });
   }, []);
 
   return (
     <>
-      {/* <Back history={history} /> */}
-      {/* <PageTitle 
-        title={record.id ? T.t("editRecord") : T.t("createRecord")}
-        /> */}
-        <div dangerouslySetInnerHTML={{ __html: post.content && marked(post.content) }}></div>
-        <TwitterTweetEmbed
+      <Back history={history} />
+      <div dangerouslySetInnerHTML={{ __html: post.content && marked(post.content) }}></div>
+      <TwitterTweetEmbed
         tweetId={'933354946111705097'}
         />
     </>
@@ -54,8 +49,12 @@ export function PostPage({
 }
 
 PostPage.propTypes = {
-    // post: PropTypes.object.isRequired,
-    history: PropTypes.object.isRequired
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      link: PropTypes.string.isRequired
+    })
+  }),
+  history: PropTypes.object.isRequired
 };
 
 export default PostPage;
